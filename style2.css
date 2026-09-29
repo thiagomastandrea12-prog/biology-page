@@ -81,6 +81,11 @@ button:hover {
     box-shadow: 0 6px 18px rgba(185, 28, 28, 0.6);
 }
 
+
+/* =========================
+   HEADER
+========================= */
+
 header {
     position: sticky;
     top: 0;
@@ -139,7 +144,12 @@ header nav a:hover {
     background-color: #fff0f0;
 }
 
-#hero {
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
     min-height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
@@ -148,24 +158,35 @@ header nav a:hover {
     text-align: center;
     padding: 80px 20px;
     color: white;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1920&q=80");
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1920&q=80");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
-#hero h1 {
+.hero h1 {
     width: 100%;
     max-width: 900px;
     margin: 0 auto 35px;
     color: white;
+    text-align: center;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 
-#hero button {
+.hero button {
     display: inline-block;
     margin: 0 auto;
 }
+
+
+/* =========================
+   INFORMACIÓN
+========================= */
 
 #informacion {
     background: white;
@@ -199,6 +220,11 @@ header nav a:hover {
     margin-bottom: 20px;
     color: #444;
 }
+
+
+/* =========================
+   ENFERMEDADES
+========================= */
 
 #enfermedades {
     padding: 100px 0;
@@ -252,16 +278,39 @@ header nav a:hover {
 }
 
 #enfermedades .carta:nth-child(1) {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url("https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=900&q=80");
+    background-image:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.1)
+        ),
+        url("https://images.unsplash.com/photo-1505576399279-565b52d4ac71?auto=format&fit=crop&w=900&q=80");
 }
 
 #enfermedades .carta:nth-child(2) {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url("https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=900&q=80");
+    background-image:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.1)
+        ),
+        url("https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=900&q=80");
 }
 
 #enfermedades .carta:nth-child(3) {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url("https://images.unsplash.com/photo-1529156069898-49953eb1b5a4?auto=format&fit=crop&w=900&q=80");
+    background-image:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.1)
+        ),
+        url("https://images.unsplash.com/photo-1529156069898-49953eb1b5a4?auto=format&fit=crop&w=900&q=80");
 }
+
+
+/* =========================
+   OTRAS ENFERMEDADES
+========================= */
 
 #otras-enfermedades {
     padding: 100px 0;
@@ -300,6 +349,11 @@ header nav a:hover {
     border-color: #b91c1c;
 }
 
+
+/* =========================
+   SÍNTOMAS
+========================= */
+
 #sintomas {
     padding: 100px 0;
     background-color: #fffcfc;
@@ -336,6 +390,11 @@ header nav a:hover {
     gap: 12px;
 }
 
+
+/* =========================
+   PREVENCIÓN
+========================= */
+
 #prevencion {
     padding: 100px 0;
     text-align: center;
@@ -369,12 +428,22 @@ header nav a:hover {
     text-shadow: none;
 }
 
+
+/* =========================
+   CUIDADOS
+========================= */
+
 #cuidados {
     padding: 120px 0;
     background-color: #1a1a1a;
     color: white;
     text-align: center;
-    background-image: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), url("https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?auto=format&fit=crop&w=1920&q=80");
+    background-image:
+        linear-gradient(
+            rgba(26, 26, 26, 0.85),
+            rgba(26, 26, 26, 0.85)
+        ),
+        url("https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?auto=format&fit=crop&w=1920&q=80");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -402,16 +471,33 @@ header nav a:hover {
     font-size: 1.15rem;
 }
 
-#hipertension, #coronaria, #acv {
+
+/* =========================
+   ENFERMEDADES INDIVIDUALES
+========================= */
+
+#hipertension,
+#coronaria,
+#acv {
     padding: 80px 0;
     text-align: center;
 }
 
-#hipertension { background-color: #fffaf9; }
-#coronaria { background-color: white; }
-#acv { background-color: #fffaf9; }
+#hipertension {
+    background-color: #fffaf9;
+}
 
-#hipertension .container, #coronaria .container, #acv .container {
+#coronaria {
+    background-color: white;
+}
+
+#acv {
+    background-color: #fffaf9;
+}
+
+#hipertension .container,
+#coronaria .container,
+#acv .container {
     max-width: 850px;
     background: white;
     padding: 50px;
@@ -423,10 +509,17 @@ header nav a:hover {
     background: #fdfdfd;
 }
 
-#hipertension h2, #coronaria h2, #acv h2 {
+#hipertension h2,
+#coronaria h2,
+#acv h2 {
     margin-bottom: 20px;
     color: #b91c1c;
 }
+
+
+/* =========================
+   FINAL
+========================= */
 
 #final {
     min-height: 500px;
@@ -438,7 +531,12 @@ header nav a:hover {
     text-align: center;
     background-color: #b91c1c;
     color: white;
-    background-image: linear-gradient(rgba(185, 28, 28, 0.85), rgba(185, 28, 28, 0.85)), url("https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1920&q=80");
+    background-image:
+        linear-gradient(
+            rgba(185, 28, 28, 0.85),
+            rgba(185, 28, 28, 0.85)
+        ),
+        url("https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1920&q=80");
     background-size: cover;
     background-position: center;
 }
@@ -464,6 +562,11 @@ header nav a:hover {
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
+
+/* =========================
+   FOOTER
+========================= */
+
 footer {
     background-color: #111;
     color: white;
@@ -481,47 +584,10 @@ footer p {
     font-size: 0.95rem;
 }
 
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        gap: 15px;
-    }
 
-    header nav {
-        width: 100%;
-        gap: 10px;
-    }
-
-    #hero {
-        min-height: calc(100vh - 130px);
-    }
-
-    #hero h1 {
-        font-size: clamp(2.2rem, 10vw, 3.5rem);
-    }
-
-    #informacion .container {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-
-    .carta {
-        max-width: 100%;
-    }
-}
-
-@media (min-width: 1000px) {
-    #informacion .texto {
-        text-align: center;
-        padding: 50px;
-    }
-}
-
-
-
-/* FUENTES OFICIALES */
+/* =========================
+   FUENTES OFICIALES
+========================= */
 
 #fuentes {
     padding: 100px 0;
@@ -562,4 +628,61 @@ footer p {
     background: #fff0f0;
     border-color: #b91c1c;
     transform: translateY(-4px);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    header .container {
+        flex-direction: column;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        gap: 15px;
+    }
+
+    header nav {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .hero {
+        min-height: calc(100vh - 130px);
+    }
+
+    .hero h1 {
+        font-size: clamp(2.2rem, 10vw, 3.5rem);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #informacion .container {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .carta {
+        max-width: 100%;
+    }
+}
+
+
+/* =========================
+   PANTALLAS GRANDES
+========================= */
+
+@media (min-width: 1000px) {
+
+    #informacion .texto {
+        text-align: center;
+        padding: 50px;
+    }
 }
