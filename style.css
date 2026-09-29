@@ -1,0 +1,329 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   ELEMENTOS GENERALES
+========================= */
+
+h1 {
+    font-size: 3.5em;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.25em;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: 1.25em;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 5px;
+}
+
+header nav {
+    display: flex;
+    gap: 5px;
+}
+
+header nav a {
+    text-decoration: none;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    padding: 3px;
+    font-family: sans-serif;
+    white-space: nowrap;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #b91c1c;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 3px;
+    white-space: nowrap;
+}
+
+.logo-icon {
+    font-size: 1.3em;
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+header .logo:hover {
+    text-decoration: underline;
+    text-align: center;
+    text-decoration-color: rgb(237, 111, 111);
+    box-shadow: 0px 2px 2px red;
+    border: 3px solid aliceblue;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+    text-align: center;
+    text-decoration-color: rgb(237, 111, 111);
+    box-shadow: 0px 2px 0px red;
+}
+
+
+/* =========================
+   IMAGEN / SVG
+========================= */
+
+.svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.svg-container img {
+    width: 100vw;
+    max-height: 80vh;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    flex: 1;
+}
+
+main .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+main a {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* =========================
+   TITULO
+========================= */
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0px 0px 0px;
+    color: #b91c1c;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 4rem;
+}
+
+
+/* =========================
+   BOTON "MAS INFORMACION"
+========================= */
+
+#mas-inf {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: inherit;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.5);
+    color: white;
+    background-color: rgb(235, 135, 135);
+    text-decoration: none;
+    margin: 20px 0px 20px 0px;
+}
+
+#mas-inf:hover {
+    background-color: rgb(220, 89, 89);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: azure;
+    width: 100vw;
+    height: 10vh;
+}
+
+
+/* =========================
+   TABLET / PANTALLAS MEDIANAS
+========================= */
+
+@media (width > 650px) {
+
+    #mas-inf {
+        margin-left: 30vw;
+        margin-right: 30vw;
+    }
+}
+
+
+/* =========================
+   TELEFONOS PEQUEÑOS
+========================= */
+
+@media (width < 440px) {
+
+    header nav {
+        display: flex;
+        flex-direction: column;
+        border: 3px solid black;
+        border-radius: 10px;
+    }
+
+    header .logo {
+        margin-bottom: 50px;
+    }
+}
+
+
+/* =========================
+   PANTALLAS GRANDES
+========================= */
+
+@media (width > 1000px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    header nav {
+        display: flex;
+        margin-left: auto;
+        gap: 20px;
+        
+    }
+
+    header .menu {
+        box-shadow: 2px 2px 2px rgb(245, 107, 107);
+    }
+
+
+    /* MAIN */
+
+    main {
+        display: flex;
+        justify-content: center;
+        background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url(undraw_medicine_hqqg.svg);
+    }
+
+    main .container {
+        background-color: wheat;
+        display: flex;
+        width: 100%;
+        max-width: 40vw;
+        height: 100%;
+        padding: 50px;
+    }
+
+
+    /* BOTON */
+
+    #mas-inf {
+        margin-top: 40px;
+        margin-bottom: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+
+    /* IMAGEN */
+
+    .svg-container img {
+        display: none;
+        margin-top: 50px;
+    }
+
+
+    /* TITULO */
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+
+    /* TEXTO */
+
+    p {
+        max-width: 20vw;
+        display: flex;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+}
