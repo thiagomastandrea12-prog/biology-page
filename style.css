@@ -13,11 +13,18 @@ html {
 }
 
 body {
-    background-color: aliceblue;
-    font-family: 'Roboto', sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #f8fafc;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 
@@ -25,28 +32,13 @@ body {
    ELEMENTOS GENERALES
 ========================= */
 
-h1 {
-    font-size: 3.5em;
-}
-
-h2 {
-    font-size: 3em;
-}
-
-h3 {
-    font-size: 2em;
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
 }
 
 p {
-    font-size: 1.25em;
-}
-
-ul {
-    list-style: none;
-}
-
-li {
-    font-size: 1.25em;
+    line-height: 1.7;
 }
 
 
@@ -54,142 +46,189 @@ li {
    HEADER
 ========================= */
 
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #e5e7eb;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    backdrop-filter: blur(10px);
+}
+
 header .container {
+    min-height: 75px;
+
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 20px 5px;
+    justify-content: space-between;
 }
 
-header nav {
-    display: flex;
-    gap: 5px;
-}
 
-header nav a {
-    text-decoration: none;
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    border: none;
-    border-radius: 10px;
-    color: black;
-    font-weight: bold;
-    padding: 3px;
-    font-family: sans-serif;
-    white-space: nowrap;
-}
+/* =========================
+   LOGO
+========================= */
 
-header .logo {
+.logo {
     display: flex;
     align-items: center;
     gap: 10px;
+
     color: #b91c1c;
     text-decoration: none;
-    font-family: sans-serif;
-    font-size: clamp(1.2rem, 2.5vw, 2rem);
-    font-weight: bold;
-    border: 3px solid black;
-    border-radius: 10px;
-    padding: 3px;
-    white-space: nowrap;
+
+    font-size: 1.5rem;
+    font-weight: 800;
+
+    transition: transform 0.25s ease;
 }
 
 .logo-icon {
-    font-size: 1.3em;
+    font-size: 1.4em;
+}
+
+.logo:hover {
+    transform: translateY(-2px);
 }
 
 
 /* =========================
-   HOVER
+   HERO
 ========================= */
 
-header .logo:hover {
-    text-decoration: underline;
-    text-align: center;
-    text-decoration-color: rgb(237, 111, 111);
-    box-shadow: 0px 2px 2px red;
-    border: 3px solid aliceblue;
+.hero {
+    min-height: calc(100vh - 75px);
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.98),
+            rgba(254, 242, 242, 0.9)
+        );
 }
 
-header nav a:hover {
-    text-decoration: underline;
-    text-align: center;
-    text-decoration-color: rgb(237, 111, 111);
-    box-shadow: 0px 2px 0px red;
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+
+    padding: 70px 0;
 }
 
 
 /* =========================
-   IMAGEN / SVG
+   TEXTO
+========================= */
+
+.hero-text {
+    max-width: 560px;
+}
+
+.eyebrow {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #b91c1c;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin-bottom: 25px;
+
+    color: #991b1b;
+
+    font-size: clamp(3rem, 7vw, 5rem);
+    line-height: 0.95;
+    font-weight: 800;
+}
+
+.hero p {
+    max-width: 550px;
+
+    margin-bottom: 35px;
+
+    color: #4b5563;
+    font-size: 1.1rem;
+}
+
+
+/* =========================
+   BOTÓN
+========================= */
+
+#mas-inf {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 24px;
+
+    border-radius: 10px;
+
+    background-color: #b91c1c;
+    color: white;
+
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+
+    box-shadow: 0 8px 20px rgba(185, 28, 28, 0.2);
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+#mas-inf span {
+    font-size: 1.2rem;
+
+    transition: transform 0.25s ease;
+}
+
+#mas-inf:hover {
+    background-color: #991b1b;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 12px 25px rgba(185, 28, 28, 0.3);
+}
+
+#mas-inf:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================
+   ILUSTRACIÓN
 ========================= */
 
 .svg-container {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding: 20px;
 }
 
 .svg-container img {
-    width: 100vw;
-    max-height: 80vh;
+    width: min(100%, 500px);
+
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.08));
+
+    transition: transform 0.4s ease;
 }
 
-
-/* =========================
-   MAIN
-========================= */
-
-main {
-    flex: 1;
-}
-
-main .container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-left: 20px;
-}
-
-main a {
-    display: flex;
-    justify-content: center;
-}
-
-
-/* =========================
-   TITULO
-========================= */
-
-h1 {
-    display: flex;
-    justify-content: center;
-    margin: 80px 0px 0px 0px;
-    color: #b91c1c;
-    font-family: sans-serif;
-    font-weight: bolder;
-    font-size: 4rem;
-}
-
-
-/* =========================
-   BOTON "MAS INFORMACION"
-========================= */
-
-#mas-inf {
-    font-size: 2em;
-    font-weight: bold;
-    font-family: inherit;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: 2px solid rgb(0, 0, 0, 0.5);
-    box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.5);
-    color: white;
-    background-color: rgb(235, 135, 135);
-    text-decoration: none;
-    margin: 20px 0px 20px 0px;
-}
-
-#mas-inf:hover {
-    background-color: rgb(220, 89, 89);
+.svg-container img:hover {
+    transform: translateY(-8px);
 }
 
 
@@ -198,132 +237,93 @@ h1 {
 ========================= */
 
 footer {
-    background-color: azure;
-    width: 100vw;
-    height: 10vh;
+    padding: 25px 0;
+
+    background-color: #111827;
+    color: #d1d5db;
+
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9rem;
 }
 
 
 /* =========================
-   TABLET / PANTALLAS MEDIANAS
+   TABLETS
 ========================= */
 
-@media (width > 650px) {
+@media (max-width: 800px) {
 
-    #mas-inf {
-        margin-left: 30vw;
-        margin-right: 30vw;
-    }
-}
+    .hero .container {
+        grid-template-columns: 1fr;
 
+        gap: 40px;
 
-/* =========================
-   TELEFONOS PEQUEÑOS
-========================= */
-
-@media (width < 440px) {
-
-    header nav {
-        display: flex;
-        flex-direction: column;
-        border: 3px solid black;
-        border-radius: 10px;
+        text-align: center;
     }
 
-    header .logo {
-        margin-bottom: 50px;
-    }
-}
-
-
-/* =========================
-   PANTALLAS GRANDES
-========================= */
-
-@media (width > 1000px) {
-
-    header {
-        display: flex;
-        justify-content: space-between;
+    .hero-text {
+        max-width: 650px;
+        margin: 0 auto;
     }
 
-    header .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    header nav {
-        display: flex;
+    .hero p {
         margin-left: auto;
-        gap: 20px;
-        
+        margin-right: auto;
     }
 
-    header .menu {
-        box-shadow: 2px 2px 2px rgb(245, 107, 107);
+    .svg-container {
+        order: -1;
     }
-
-
-    /* MAIN */
-
-    main {
-        display: flex;
-        justify-content: center;
-        background-image: linear-gradient(
-            0deg,
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-        ),
-        url(undraw_medicine_hqqg.svg);
-    }
-
-    main .container {
-        background-color: wheat;
-        display: flex;
-        width: 100%;
-        max-width: 40vw;
-        height: 100%;
-        padding: 50px;
-    }
-
-
-    /* BOTON */
-
-    #mas-inf {
-        margin-top: 40px;
-        margin-bottom: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        margin-bottom: 20px;
-    }
-
-
-    /* IMAGEN */
 
     .svg-container img {
-        display: none;
-        margin-top: 50px;
+        width: min(75%, 400px);
+    }
+}
+
+
+/* =========================
+   TELEFONOS
+========================= */
+
+@media (max-width: 500px) {
+
+    header .container {
+        min-height: 65px;
     }
 
+    .logo {
+        font-size: 1.25rem;
+    }
 
-    /* TITULO */
+    .hero {
+        min-height: auto;
+    }
+
+    .hero .container {
+        padding: 55px 0;
+    }
+
+    .eyebrow {
+        font-size: 0.75rem;
+    }
 
     h1 {
-        margin-bottom: 30px;
+        font-size: 3rem;
     }
 
+    .hero p {
+        font-size: 1rem;
+    }
 
-    /* TEXTO */
+    .svg-container img {
+        width: 85%;
+    }
 
-    p {
-        max-width: 20vw;
-        display: flex;
-        margin: auto;
-        margin-bottom: 50px;
+    #mas-inf {
+        width: 100%;
+        justify-content: center;
     }
 }
